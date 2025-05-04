@@ -7,5 +7,5 @@ jobs:
    runs-on: ubuntu-latest
 
   steps:
-    - name: greeting people
-      run: echo " good morning all "
+   - name: greeting people
+     run: echo " good morning all "
