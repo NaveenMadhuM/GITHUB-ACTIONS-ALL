@@ -1,0 +1,11 @@
+name: Manually Trigger
+on:
+  workflow_dispatch:
+
+jobs:
+  print_message:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Greeting
+        run: echo 'wellcome'
