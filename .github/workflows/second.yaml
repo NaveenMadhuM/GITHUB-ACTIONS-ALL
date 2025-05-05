@@ -3,12 +3,17 @@ on:
   push:
     branches: [main]
 jobs:
-  code_check_status:
+  setup:
     runs-on: ubuntu-latest
     steps:
-      - name: code_checkout
-        uses: actions/checkout@v4
-      - name: list_the _files
-      - run: |
-            ls
-            ls -ltr           
+      - run: ./setup_server.sh
+  build:
+    needs: setup
+    runs-on: ubuntu-latest
+    steps:
+      - run: ./build_server.sh
+  test:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - run: ./test_server.sh       
