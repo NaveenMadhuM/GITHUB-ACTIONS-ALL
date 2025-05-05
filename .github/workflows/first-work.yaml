@@ -10,3 +10,8 @@ jobs:
     steps:
       - name: code_checkout
         uses: actions/checkout@v4
+
+      - name: list_the _files
+        run: |
+            ls
+            ls -ltr
