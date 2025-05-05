@@ -1,7 +1,7 @@
 name: FIRST-WORKFLOW
 on: [push]
 jobs:
-  code-checkout:
+  codecheck1:
    runs-on: ubuntu-latest
    steps:
     - name: checking the code from repository
