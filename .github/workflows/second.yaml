@@ -8,10 +8,7 @@ jobs:
     steps:
       - name: code_checkout
         uses: actions/checkout@v4
-      -  run: echo " ${{github.actor}} is responsible to checkout the code."
-      -  run: echo "the code is in ${{github.repository}}."
       - name: list_the _files
       - run: |
             ls
             ls -ltr           
-      - run: echo "it is listing the files in ${{github.respsitory}}."
