@@ -1,13 +1,11 @@
 name: first workflow
-run-name: ${{github.actor}} is the owner of the repository
+run-name: ${{ github.actor }} is testing out GitHub Actions
 on:
   push:
     branches: [main]
-
 jobs:
   code_check_status:
     runs-on: ubuntu-latest
-
     steps:
       - name: code_checkout
         uses: actions/checkout@v4
@@ -16,6 +14,5 @@ jobs:
       - name: list_the _files
       - run: |
             ls
-            ls -ltr
-            
+            ls -ltr           
       - run: echo "it is listing the files in ${{github.respsitory}}."
