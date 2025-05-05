@@ -1,15 +1,13 @@
 name: FIRST-WORKFLOW
-on:
- push:
-  branches: [main,master,brch1]
+on: [push]
 jobs:
   code-checkout:
    runs-on: ubuntu-latest
    steps:
-   - name: checking the code from repository
-   - uses: actions/checkout@v4
-   - name: list the files present
-   - run: |
+    - name: checking the code from repository
+    - uses: actions/checkout@v4
+    - name: list the files present
+    - run: |
         ls
         ls -ltr
         
