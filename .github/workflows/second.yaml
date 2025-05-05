@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node: [14, 16]
+        node: [14, 16,12,8]
     steps:
       - uses: actions/setup-node@v4
         with:
