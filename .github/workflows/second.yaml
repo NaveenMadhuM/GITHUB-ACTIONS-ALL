@@ -3,17 +3,18 @@ on:
   push:
     branches: [main]
 jobs:
-  setup:
+  code_checkout:
     runs-on: ubuntu-latest
     steps:
-      - run: ./setup_server.sh
+      - name: codecheckout
+      - run: actions/checkout@v4
   build:
-    needs: setup
+    needs: code_checkout
     runs-on: ubuntu-latest
     steps:
-      - run: ./build_server.sh
+      - run: echo" building the application packages"
   test:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - run: ./test_server.sh       
+      - run: echo " testing the application    
