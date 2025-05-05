@@ -1,11 +1,18 @@
-run-name: first workflow
+name: FIRST-WORKFLOW
 on:
  push:
-  branches: [main]
+  branches: [main,master,brch1]
 jobs:
-    print-message:
-     runs-on: ubuntu-latest
-     steps:
-     - name: greeting
-       run: echo ' hi'
-    
+  code-checkout:
+   runs-on: ubuntu-latest
+   steps:
+   - name: checking the code from repository
+   - uses: actions/checkout@v4
+   - name: list the files present
+   - run: |
+        ls
+        ls -ltr
+        
+   
+          
+  
