@@ -1,5 +1,4 @@
 name: first workflow
-run-name: ${{ github.actor }} is testing out GitHub Actions
 on:
   push:
     branches: [main]
